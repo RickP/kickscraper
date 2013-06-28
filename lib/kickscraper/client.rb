@@ -128,7 +128,7 @@ module Kickscraper
                 
                 Project.coerce body
                 
-            when "projects"
+            when "projects", "category_projects"
                 
                 # if the body doesn't have any projects, return an empty array
                 if body.projects.nil?
