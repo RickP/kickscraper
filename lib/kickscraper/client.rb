@@ -39,7 +39,7 @@ module Kickscraper
         end
 
         def recently_launched_projects(starting_at_timestamp = nil)
-            self::process_api_call "projects", "recently_launched", "", starting_at_timestamp
+            self::process_api_call "category_projects", "recently_launched", "", starting_at_timestamp
         end
 
         alias_method :newest_projects, :recently_launched_projects
@@ -183,6 +183,8 @@ module Kickscraper
                 full_uri += "/projects"
             when "category", "categories"
                 full_uri += "/categories"
+            when "category_projects"
+                full_uri += "/categories/projects"
             end
             
             
